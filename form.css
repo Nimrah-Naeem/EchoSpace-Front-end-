@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mooli', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    background-color: #0a4932;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+}
+
+.nav-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ddd; 
+}
+
+/* Contact Section Styles */
+#contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #0a4932; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Added gap for better spacing */
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #0a4932;
+}
+
+button {
+    padding: 10px;
+    background-color: #0a4932;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2da070; 
+}
+
+#response-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #0a4932; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        align-items: flex-start; 
+    }
+
+    #contact {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    #contact h2 {
+        font-size: 24px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-title {
+        font-size: 20px; 
+    }
+
+    #contact h2 {
+        font-size: 22px; 
+    }
+}

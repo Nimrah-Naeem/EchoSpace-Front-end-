@@ -1,0 +1,319 @@
+/* Basic Reset */
+html{
+    scroll-behavior: smooth;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333; 
+    background-color: #f9f9f9;
+    overflow-x: hidden; 
+    padding-top: 100px; /* Account for fixed navigation */
+}
+
+/* Navigation Styles */
+nav {
+    font-family: 'Mooli', serif; 
+    font-weight: bold;
+    background-color: rgb(245, 244, 244); 
+    padding: 30px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-title {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #042f1f; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #042f1f; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+/* Media Query for Responsive Navigation */
+@media (max-width: 490px) {
+    .nav-title {
+        display: none; 
+    }
+    
+    nav {
+        justify-content: center; 
+    }
+    
+    nav ul {
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+
+    nav li {
+        margin: 0 10px; 
+        flex: 1; 
+        text-align: center; 
+    }
+}
+
+/* Header Styles */
+header {
+    background-image: url(images/painted-fern-its-shadow-copy-space-background_23-2148325798.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    color: #042f1f;
+    font-size: 24px; 
+    padding: 1em;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+header h1, header p {
+    margin: 0; 
+}
+
+.cta-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #042f1f; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-top: 20px; 
+}
+
+.cta-button:hover {
+    background-color: #388669; 
+}
+
+/* About Section Styles */
+#about {
+    padding: 4em 0;
+    background-color: #f4f7ef; 
+}
+
+.about-content {
+    display: flex; 
+    align-items: stretch;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.about-image {
+    width: 50%; 
+    background-image: url('images/abstract-woman-green-yellow-swirls_1150025-13835.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #cccccc; 
+}
+
+.about-text {
+    color: #042f1f;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 50%; 
+    padding: 2em; 
+    box-sizing: border-box; 
+}
+
+.about-text h2 {
+    font-family: 'Mooli', serif;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+/* Media Query for Responsive About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .about-image {
+        width: 100%; 
+        height: 250px; 
+    }
+
+    .about-text {
+        width: 100%; 
+        padding: 1em; 
+    }
+}
+
+/* Services Section Styles */
+#services {
+    padding: 2em 0; 
+    background-color: #f9f9f9; 
+    text-align: center; 
+}
+
+#services h2 {
+    padding-top: 0; /* Set to 0 to decrease top padding */
+    padding-bottom: 1em;
+    font-family: 'Mooli', serif;
+    color: #042f1f;
+    font-size: 50px;
+}
+
+.services-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.service-card {
+    background-color: #ffffff; 
+    border: 1px solid #dddddd; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, background-color 0.2s; 
+}
+
+.service-card:hover {
+    transform: scale(1.05); 
+    background-color: rgb(207, 244, 228);
+}
+
+.service-card h3 {
+    color: #042f1f; 
+    margin-bottom: 10px; 
+}
+
+.service-card p {
+    color: #555; 
+}
+
+/* Testimonials Section Styles */
+#testimonials {
+    margin-top: 4em;
+    padding: 4em 0; 
+    background-color: #e5f6f2; 
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: #042f1f;
+    font-size: 50px;
+    margin-bottom: 0.5em; 
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.testimonial-card {
+    background-color: #ffffff; 
+    border: 1px solid #dddddd; 
+    border-radius: 8px; 
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin: 20px; 
+    min-height: 150px; 
+    transition: all 0.5s ease; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.testimonial-card p {
+    text-align: center; 
+    margin: 0; 
+    word-wrap: break-word; 
+}
+
+/* Testimonial Counter Styles */
+#testimonial-counter {
+    font-size: 18px; 
+    margin-top: 10px; 
+    color: #333; 
+}
+
+/* Navigation Arrows Styles */
+.navigation-arrows {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.arrow {
+    font-size: 30px; 
+    cursor: pointer; 
+    margin: 0 20px; 
+    color: #042f1f; 
+    transition: color 0.2s; 
+}
+footer {
+    background-color: #0a4932; /* Match with your theme */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin-bottom: 15px; /* Add margin to space after "Connect with us:" */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Space between links */
+    transition: color 0.3s;
+    font-size: 16px; /* Adjust the font size */
+}
+
+.footer-content a i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.footer-content a:hover {
+    color: #ddd; /* Change color on hover */
+}
+
+.footer-bottom {
+    font-size: 14px;
+}
